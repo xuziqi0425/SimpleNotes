@@ -1,0 +1,92 @@
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://cdn.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.10/favicon.ico">
+    <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/dashboard/">
+
+    <title>Dashboard Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/public/css/main.css" rel="stylesheet">
+
+
+</head>
+
+<body >
+<nav class="navbar navbar-inverse">
+    <div class="alert alert-success" role="alert" style="width: 100%;text-align: center"><h1>留言板</h1></div>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div >
+            <div class="jumbotron">
+                <div style="display: inline-block;width: 35vw">
+                    <h1>纯粹留言板!</h1>
+                    <p>暂时只有基础留言功能，消息过滤，字段等依据要求自行添加</p>
+                    <p><button class=" btn-primary btn-lg"  role="button" onclick="addMore()">Add more</button></p>
+                </div>
+                <img src="public/img/yeah.png" style="width: 60vw;height:40vh ">
+            </div>
+
+            <h2 class="sub-header">以下留下你的内容</h2>
+            <a class="btn btn-success" href="/comment/new">添加</a>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>姓名</th>
+<!--                        <th>性别</th>-->
+<!--                        <th>年龄</th>-->
+                        <th>留言</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {{each students}}
+                    <tr>
+                        <td>{{$value.id}}</td>
+                        <td>{{$value.name}}</td>
+<!--                        <td>{{$value.gender}}</td>-->
+<!--                        <td>{{$value.age}}</td>-->
+                        <td>{{$value.hobbies}}</td>
+                        <td>
+                            <a href="/comment/edit?id={{$value.id}}">编辑</a>
+                            <a href="/comment/delete?id={{$value.id}}">删除</a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="https://cdn.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.10/assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="https://cdn.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.10/dist/js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="https://cdn.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.10/assets/js/vendor/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="https://cdn.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.10/assets/js/ie10-viewport-bug-workaround.js"></script>
+<script>
+    function addMore() {
+        alert('功能扩充ing')
+    }
+</script>
+</body>
+</html>
