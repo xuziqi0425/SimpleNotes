@@ -3,7 +3,7 @@
 &nbsp;&nbsp;这里不是建议大家之后都用json储存数据，数据库相比于json优势还是很大的，但是json也可以作为一种选择<br>
  页面主要实现了最基础的留言板功能，包含留言，编辑，删除，数据使用json存储，适合纯前端做一些小项目使用，使用bootstrap也赋予了小项目更多的可拓展性，可结合其他框架而不会有太多冲突。<br>
     主要技术栈  `html css js` `bootstrap` `nodejs(后台)`<br>
-![image](https://user-images.githubusercontent.com/79557958/162008142-e3ac4070-0858-411f-ba54-8c8bc0fa8bf1.png)
+![_53U8G( D$$6AGX3O9%VQ}C](https://user-images.githubusercontent.com/79557958/162122517-47fa0cbf-1736-4f48-9342-aa6c15cfa063.png)
 
     运行方式  在安装node环境的前提下 `node app`
    
